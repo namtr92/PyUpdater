@@ -185,7 +185,7 @@ class Package(object):
         try:
             m = re.search(r"\d+(\.\d+)*([a-zA-Z0-9-]*)?", package_basename)
             ver = m.group(0)
-            v = Version(package_basename)
+            v = Version(ver)
             self.channel = v.channel
             self.version = str(v)
         except VersionError:
