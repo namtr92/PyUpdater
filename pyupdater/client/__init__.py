@@ -430,7 +430,7 @@ class Client(object):
     # Downloading the manifest. If successful also writes it to file-system
     def _get_manifest_from_http(self):
         log.debug("Downloading online version file")
-        version_files = [self.version_file, self.version_file_compat]
+        version_files = [self.version_file_compat]
 
         for vf in version_files:
             try:
