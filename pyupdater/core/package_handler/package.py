@@ -183,6 +183,8 @@ class Package(object):
 
         log.debug("Extracting update archive info for: %s", package_basename)
         try:
+            m = re.search(r"\d+(\.\d+)*([a-zA-Z0-9-]*)?", package_basename)
+            ver = m.group(0)
             v = Version(package_basename)
             self.channel = v.channel
             self.version = str(v)
